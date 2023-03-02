@@ -1,0 +1,80 @@
+Source: kio-extras
+Section: kde
+Priority: optional
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Norbert Preining <norbert@preining.info>
+Build-Depends: cmake (>= 3.16~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.82.0~),
+               gettext,
+               gperf,
+               kio,
+               libappimage-dev,
+               libkdsoap-dev (>= 1.9.0~),
+               libkf5activities-dev (>= 5.3.0~),
+               libkf5activitiesstats-dev (>= 5.62~),
+               libkf5archive-dev (>= 5.82.0~),
+               libkf5bookmarks-dev (>= 5.82.0~),
+               libkf5codecs-dev,
+               libkf5config-dev (>= 5.82.0~),
+               libkf5configwidgets-dev (>= 5.82.0~),
+               libkf5coreaddons-dev (>= 5.82.0~),
+               libkf5dbusaddons-dev (>= 5.82.0~),
+               libkf5dnssd-dev (>= 5.82.0~),
+               libkf5doctools-dev (>= 5.82.0~),
+               libkf5guiaddons-dev (>= 5.82.0~),
+               libkf5i18n-dev (>= 5.82.0~),
+               libkf5iconthemes-dev (>= 5.72.0~),
+               libkf5kio-dev (>= 5.82.0~),
+               libkf5pty-dev (>= 5.72.0~),
+               libkf5solid-dev (>= 5.82.0~),
+               libkf5syntaxhighlighting-dev (>= 5.82.0~),
+               libmtp-dev,
+               libopenexr-dev,
+               libphonon4qt5-dev (>= 4:4.6.60),
+               libphonon4qt5experimental-dev,
+               libqt5svg5-dev (>= 5.15.0~),
+               libsmbclient-dev,
+               libssh-dev (>= 0.7.0),
+               libtag1-dev (>= 1.11~),
+               libtirpc-dev,
+               pkg-config,
+               pkg-kde-tools (>= 0.15.18~),
+               qtbase5-dev (>= 5.15.0~),
+               shared-mime-info,
+Standards-Version: 4.6.0
+Homepage: https://projects.kde.org/projects/kde/workspace/kio-extras
+Vcs-Browser: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/kio-extras
+Vcs-Git: https://git.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/kio-extras
+Rules-Requires-Root: no
+
+Package: kio-extras
+Architecture: any
+Depends: kio-extras-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: kactivities
+Replaces: kactivities
+Description: Extra functionality for kioslaves.
+ A kioslave is a plugin designed to be intimately familiar with a certain
+ protocol, so that a standardized interface can be used to get at data from
+ any number of places.  A few examples are the http and ftp kioslaves,
+ which using nearly identical methods will retrieve data from an http or
+ ftp server respectively.
+ .
+ This package is part of the KDE base workspace module.
+
+Package: kio-extras-data
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Breaks: kactivities, kio-mtp (<< 0.75+git20140304-1ubuntu1~), ${kde-l10n:all}
+Replaces: kactivities, kio-mtp (<< 0.75+git20140304-1ubuntu1~), ${kde-l10n:all}
+Description: Extra functionality for kioslaves data files.
+ A kioslave is a plugin designed to be intimately familiar with a certain
+ protocol, so that a standardized interface can be used to get at data from
+ any number of places.  A few examples are the http and ftp kioslaves,
+ which using nearly identical methods will retrieve data from an http or
+ ftp server respectively.
+ .
+ This package contains the data files

@@ -1,0 +1,37 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-30 00:17+0000\n"
+"PO-Revision-Date: 2021-04-16 17:31+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: kio_mtp.cpp:217
+#, kde-format
+msgid ""
+"No storage media found. Make sure your device is unlocked and has MTP "
+"enabled in its USB connection settings."
+msgstr ""
+"Nu au fost găsite medii de stocare. Asigurați-vă că dispozitivul e deblocat "
+"și are MTP activat în configurările conexiunii sale USB."
+
+#: kio_mtp.cpp:520
+#, kde-format
+msgid "Cannot copy/move files on the device itself"
+msgstr "Fișierele nu pot fi copiate/mutate pe dispozitivul în sine"
+
+#~ msgid "No Storages found. Maybe you need to unlock your device?"
+#~ msgstr ""
+#~ "Nu a fost găsită nicio stocare. Poate trebuie să deblocați dispozitivul?"

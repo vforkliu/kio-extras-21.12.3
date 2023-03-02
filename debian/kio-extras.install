@@ -1,0 +1,4 @@
+usr/lib/*/libexec/kf5/
+usr/lib/*/libkioarchive.so.5
+usr/lib/*/libkioarchive.so.5.*
+usr/lib/*/qt5

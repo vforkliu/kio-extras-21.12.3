@@ -1,0 +1,218 @@
+# Translation of kio5_sftp to Northern Sami
+#
+# Børre Gaup <boerre@skolelinux.no>, 2003, 2004, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_sftp\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-04 00:18+0000\n"
+"PO-Revision-Date: 2005-10-24 23:13+0200\n"
+"Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
+"Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
+"Language: se\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: kio_sftp.cpp:208
+#, kde-format
+msgid "Incorrect or invalid passphrase"
+msgstr ""
+
+#: kio_sftp.cpp:258
+#, kde-format
+msgid "Could not allocate callbacks"
+msgstr ""
+
+#: kio_sftp.cpp:271
+#, kde-format
+msgid "Could not set log verbosity."
+msgstr ""
+
+#: kio_sftp.cpp:276
+#, kde-format
+msgid "Could not set log userdata."
+msgstr ""
+
+#: kio_sftp.cpp:281
+#, kde-format
+msgid "Could not set log callback."
+msgstr ""
+
+#: kio_sftp.cpp:350 kio_sftp.cpp:352 kio_sftp.cpp:880
+#, kde-format
+msgid "SFTP Login"
+msgstr "SFTP-sisačáliheapmi"
+
+#: kio_sftp.cpp:367
+#, kde-format
+msgid "Use the username input field to answer this question."
+msgstr ""
+
+#: kio_sftp.cpp:380
+#, kde-format
+msgid "Please enter your password."
+msgstr ""
+
+#: kio_sftp.cpp:385 kio_sftp.cpp:883
+#, kde-format
+msgid "Site:"
+msgstr "Fierpmádatbáiki:"
+
+#: kio_sftp.cpp:432
+#, kde-format
+msgctxt "error message. %1 is a path, %2 is a numeric error code"
+msgid "Could not read link: %1 [%2]"
+msgstr ""
+
+#: kio_sftp.cpp:570
+#, kde-format
+msgid "Could not create a new SSH session."
+msgstr ""
+
+#: kio_sftp.cpp:581 kio_sftp.cpp:585
+#, kde-format
+msgid "Could not set a timeout."
+msgstr ""
+
+#: kio_sftp.cpp:592
+#, kde-format
+msgid "Could not disable Nagle's Algorithm."
+msgstr ""
+
+#: kio_sftp.cpp:598 kio_sftp.cpp:603
+#, kde-format
+msgid "Could not set compression."
+msgstr ""
+
+#: kio_sftp.cpp:609
+#, kde-format
+msgid "Could not set host."
+msgstr ""
+
+#: kio_sftp.cpp:615
+#, kde-format
+msgid "Could not set port."
+msgstr ""
+
+#: kio_sftp.cpp:623
+#, kde-format
+msgid "Could not set username."
+msgstr ""
+
+#: kio_sftp.cpp:630
+#, kde-format
+msgid "Could not parse the config file."
+msgstr ""
+
+#: kio_sftp.cpp:647
+#, kde-kuit-format
+msgid "Opening SFTP connection to host %1:%2"
+msgstr ""
+
+#: kio_sftp.cpp:687
+#, kde-format
+msgid "Could not get server public key type name"
+msgstr ""
+
+#: kio_sftp.cpp:700
+#, kde-format
+msgid "Could not create hash from server public key"
+msgstr ""
+
+#: kio_sftp.cpp:709
+#, kde-format
+msgid "Could not create fingerprint for server public key"
+msgstr ""
+
+#: kio_sftp.cpp:769
+#, kde-format
+msgid ""
+"An %1 host key for this server was not found, but another type of key "
+"exists.\n"
+"An attacker might change the default server key to confuse your client into "
+"thinking the key does not exist.\n"
+"Please contact your system administrator.\n"
+"%2"
+msgstr ""
+
+#: kio_sftp.cpp:780
+#, kde-format
+msgid ""
+"The host key for the server %1 has changed.\n"
+"This could either mean that DNS SPOOFING is happening or the IP address for "
+"the host and its host key have changed at the same time.\n"
+"The fingerprint for the %2 key sent by the remote host is:\n"
+"  SHA256:%3\n"
+"Please contact your system administrator.\n"
+"%4"
+msgstr ""
+
+#: kio_sftp.cpp:794
+#, kde-format
+msgid "Warning: Cannot verify host's identity."
+msgstr "Váruhus: Ii sáhte dárkkistit guossoheaddji identitehta."
+
+#: kio_sftp.cpp:796
+#, kde-format
+msgid ""
+"The authenticity of host %1 cannot be established.\n"
+"The %2 key fingerprint is: %3\n"
+"Are you sure you want to continue connecting?"
+msgstr ""
+
+#: kio_sftp.cpp:826 kio_sftp.cpp:844 kio_sftp.cpp:859 kio_sftp.cpp:872
+#: kio_sftp.cpp:924 kio_sftp.cpp:934
+#, kde-format
+msgid "Authentication failed."
+msgstr "Autentiseren filtii."
+
+#: kio_sftp.cpp:832
+#, kde-format
+msgid ""
+"Authentication failed. The server didn't send any authentication methods"
+msgstr ""
+
+#: kio_sftp.cpp:881
+#, kde-format
+msgid "Please enter your username and password."
+msgstr "Attes geavaheaddjinama ja beassansáni."
+
+#: kio_sftp.cpp:892
+#, kde-format
+msgid "Incorrect username or password"
+msgstr "Boastu geavaheaddjinamma dahje beassansátni."
+
+#: kio_sftp.cpp:941
+#, kde-format
+msgid ""
+"Unable to request the SFTP subsystem. Make sure SFTP is enabled on the "
+"server."
+msgstr ""
+
+#: kio_sftp.cpp:946
+#, kde-format
+msgid "Could not initialize the SFTP session."
+msgstr ""
+
+#: kio_sftp.cpp:950
+#, kde-format
+msgid "Successfully connected to %1"
+msgstr "Lihkostuvai oktavuođaváldin dása: %1"
+
+#: kio_sftp.cpp:1003
+#, kde-format
+msgid "Invalid sftp context"
+msgstr ""
+
+#: kio_sftp.cpp:1568
+#, kde-format
+msgid ""
+"Could not change permissions for\n"
+"%1"
+msgstr "Ii sáhttán rievdadit vuoigatvuođaid %1 várás"

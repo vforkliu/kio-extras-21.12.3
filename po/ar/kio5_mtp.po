@@ -1,0 +1,37 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-30 00:17+0000\n"
+"PO-Revision-Date: 2021-07-02 22:41+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: kio_mtp.cpp:217
+#, kde-format
+msgid ""
+"No storage media found. Make sure your device is unlocked and has MTP "
+"enabled in its USB connection settings."
+msgstr ""
+"لم يتم العثور على وسائط تخزين. تأكد من إلغاء قفل جهازك وتمكين MTP في إعدادات "
+"اتصال USB الخاصة به."
+
+#: kio_mtp.cpp:520
+#, kde-format
+msgid "Cannot copy/move files on the device itself"
+msgstr "لا يمكن نسخ/نقل الملفّات في نفس الجهاز"
+
+#~ msgid "No Storages found. Maybe you need to unlock your device?"
+#~ msgstr "لم يُعثر على تخازين. لربّما عليك إزالة قفل جهازك؟"

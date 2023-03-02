@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_fish\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-30 00:17+0000\n"
+"PO-Revision-Date: 2004-08-09 04:16-0800\n"
+"Last-Translator: Tamil PC <tamilpc@ambalam.com>\n"
+"Language-Team: KDE <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: fish.cpp:289
+#, kde-format
+msgid "Connecting..."
+msgstr "இணைக்கிறது..."
+
+#: fish.cpp:591
+#, kde-format
+msgid "Initiating protocol..."
+msgstr "நெறிமுறையை ஆரம்பி..."
+
+#: fish.cpp:627
+#, kde-format
+msgid "Local Login"
+msgstr "வரம்புறு புகுபதிகை"
+
+#: fish.cpp:629
+#, fuzzy, kde-format
+#| msgid "SSH Authorization"
+msgid "SSH Authentication"
+msgstr "SSH உரிமைவழங்கும்"
+
+#: fish.cpp:759
+#, kde-format
+msgid "Disconnected."
+msgstr "இணைக்கப்படாத."

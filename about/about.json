@@ -1,0 +1,14 @@
+{
+    "KDE-KIO-Protocols": {
+        "about": {
+            "Class": ":local",
+            "Icon": "help-about",
+            "defaultMimetype": "text/html",
+            "exec": "kf5/kio/about",
+            "input": "none",
+            "output": "filesystem",
+            "protocol": "about",
+            "reading": true
+        }
+    }
+}
