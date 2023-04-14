@@ -66,6 +66,7 @@ static bool contentContainsPattern(const QUrl &url, const QRegularExpression &re
 static bool match(const KIO::UDSEntry &entry, const QRegularExpression &regex, bool searchContents)
 {
     if (!searchContents) {
+        qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::match]regex:" << regex << ",name:" << entry.stringValue(KIO::UDSEntry::UDS_NAME);
         return regex.match(entry.stringValue(KIO::UDSEntry::UDS_NAME)).hasMatch();
     } else {
         const QUrl entryUrl(entry.stringValue(KIO::UDSEntry::UDS_URL));
@@ -91,6 +92,7 @@ FileNameSearchProtocol::~FileNameSearchProtocol() = default;
 
 void FileNameSearchProtocol::stat(const QUrl &url)
 {
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::stat]url:" << url;
     KIO::UDSEntry uds;
     uds.reserve(9);
     uds.fastInsert(KIO::UDSEntry::UDS_ACCESS, 0700);
@@ -114,6 +116,7 @@ void FileNameSearchProtocol::stat(const QUrl &url)
 // Create a UDSEntry for "."
 void FileNameSearchProtocol::listRootEntry()
 {
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::listRootEntry] enter ...";
     KIO::UDSEntry entry;
     entry.reserve(4);
     entry.fastInsert(KIO::UDSEntry::UDS_NAME, QStringLiteral("."));
@@ -121,14 +124,17 @@ void FileNameSearchProtocol::listRootEntry()
     entry.fastInsert(KIO::UDSEntry::UDS_SIZE, 0);
     entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH);
     listEntry(entry);
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::listRootEntry] leave.";
 }
 
 void FileNameSearchProtocol::listDir(const QUrl &url)
 {
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::listDir]url:" << url;
     listRootEntry();
 
     const QUrlQuery urlQuery(url);
     const QString search = urlQuery.queryItemValue(QStringLiteral("search"));
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::listDir]search:" << search;
     if (search.isEmpty()) {
         finished();
         return;
@@ -142,6 +148,7 @@ void FileNameSearchProtocol::listDir(const QUrl &url)
     }
 
     const QUrl dirUrl = QUrl(urlQuery.queryItemValue(QStringLiteral("url")));
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::listDir]location:" << dirUrl;
 
     // Don't try to iterate the /proc directory of Linux
     if (dirUrl.isLocalFile() && dirUrl.toLocalFile() == QLatin1String("/proc")) {
@@ -150,6 +157,7 @@ void FileNameSearchProtocol::listDir(const QUrl &url)
     }
 
     const bool isContent = urlQuery.queryItemValue(QStringLiteral("checkContent")) == QLatin1String("yes");
+    qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::listDir]isContent:" << isContent;
 
     std::set<QString> iteratedDirs;
     std::vector<QUrl> pendingDirs;
@@ -212,12 +220,14 @@ void FileNameSearchProtocol::searchDir(const QUrl &dirUrl,
 
             if (match(entry, regex, searchContents)) {
                 // UDS_DISPLAY_NAME is e.g. "foo/bar/somefile.txt"
+                qCInfo(KIO_FILENAMESEARCH) << "[FileNameSearch::searchDir]matched name:" << fileName;
                 entry.replace(KIO::UDSEntry::UDS_DISPLAY_NAME, fileName);
                 listEntry(entry);
             }
         }
     });
 
+    // 为什么要调用同步接口 ?
     listJob->exec();
 }
 
